@@ -3,16 +3,7 @@ layout: none
 permalink: index.html
 ---
 <html>
-    <head>
-        <?php 
-function base64_encode_image ($filename=string,$filetype=string) {
-    if ($filename) {
-        $imgbinary = fread(fopen($filename, "r"), filesize($filename));
-        return 'data:image/' . $filetype . ';base64,' . base64_encode($imgbinary);
-    }
-}
-?>
-    </head>
+    
     <body>
         <img width="100%" src="<?php echo base64_encode_image ('h2-heyerlein-riYdn15o96U-unsplash-1.jpg','jpg'); ?>"/>
     </body>
