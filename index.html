@@ -2,8 +2,9 @@
 layout: none
 permalink: index.html
 ---
-
-<?php 
+<html>
+    <head>
+        <?php 
 function base64_encode_image ($filename=string,$filetype=string) {
     if ($filename) {
         $imgbinary = fread(fopen($filename, "r"), filesize($filename));
@@ -11,4 +12,10 @@ function base64_encode_image ($filename=string,$filetype=string) {
     }
 }
 ?>
-<img width="100%" margin="0" src="<?php echo base64_encode_image ('h2-heyerlein-riYdn15o96U-unsplash-1.jpg','jpg'); ?>"/>
+    </head>
+    <body>
+        <img width="100%" src="<?php echo base64_encode_image ('h2-heyerlein-riYdn15o96U-unsplash-1.jpg','jpg'); ?>"/>
+    </body>
+</html>
+
+
